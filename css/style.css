@@ -1,4 +1,142 @@
-h1 {
-    color: purple;
+h2 {
+    color: #fff;
     text-decoration: underline;
+}
+
+body {
+    background-image: url("../img/matrix.jpg");
+    background-color: #560119;
+    color: white;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 1000px 300px;
+    font-family: 'vt323', monospace;
+
+}
+
+ul {
+    list-style: hebrew;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 3px dotted white;
+}
+
+tr:nth-child(even) {
+    background-color: #acaca7;
+}
+
+td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.main {
+    font-family: 'Share Tech Mono', monospace;
+    position: relative;
+    width: 400px;
+    border-radius: 50%;
+    transform: rotate(-50deg);
+    horiz-align: center;
+}
+
+h1 span {
+    height: 200px;
+    position: absolute;
+    width: 20px;
+    left: 0;
+    top: 0;
+    transform-origin: bottom center;
+}
+
+.char1 {
+    transform: rotate(6deg);
+}
+
+.char2 {
+    transform: rotate(12deg);
+}
+
+.char3{
+    transform: rotate(18deg);
+}
+
+.char4 {
+    transform: rotate(24deg);
+}
+
+.char5 {
+    transform: rotate(30deg);
+}
+
+.char6 {
+    transform: rotate(36deg);
+}
+
+.char7 {
+    transform: rotate(42deg);
+}
+
+.char8 {
+    transform: rotate(48deg);
+}
+
+.char9 {
+    transform: rotate(54deg);
+}
+
+.char10 {
+    transform: rotate(60deg);
+}
+
+.char11 {
+    transform: rotate(66deg);
+}
+
+.char12 {
+    transform: rotate(72deg);
+}
+
+.char13 {
+    transform: rotate(78deg);
+}
+
+.char14 {
+    transform: rotate(84deg);
+}
+
+.char15 {
+    transform: rotate(90deg);
+}
+
+.char16 {
+    transform: rotate(96deg);
+}
+
+a:link {
+color: red;
+}
+
+a:visited {
+    color: green;
+}
+
+a:hover {
+    color: gray;
+}
+
+a:active {
+    color: orange;
+}
+
+h1 {
+    text-align: center;
+    z-index: 999;
+    height: 700px;
+    position: relative;
+    left: 450px;
 }
