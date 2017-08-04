@@ -6,6 +6,7 @@
     color: white;
     font-weight: bold;
     margin: 25px;
+    position: relative;
 }
 
 #red {
@@ -49,10 +50,9 @@
     height: 1000px;
 }
 
-image {
-
+img{
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
 }
 
-img {
-    display: none;
-}
