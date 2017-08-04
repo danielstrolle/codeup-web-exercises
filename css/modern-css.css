@@ -1,0 +1,16 @@
+.menu {
+    position: relative;
+}
+
+.menu>a {
+    position: relative;
+}
+
+.content {
+    position: relative;
+    float: right;
+}
+
+.article {
+    position: relative;
+}
