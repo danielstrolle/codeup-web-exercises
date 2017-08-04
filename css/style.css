@@ -46,6 +46,7 @@ td {
 
 h1 span {
     height: 200px;
+    float: left;
     position: absolute;
     width: 20px;
     left: 0;
@@ -135,8 +136,10 @@ a:active {
 
 h1 {
     text-align: center;
+    float: top;
     z-index: 999;
     height: 700px;
     position: relative;
     left: 450px;
+
 }
