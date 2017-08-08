@@ -1,16 +1,21 @@
+div.container {
+    width: 100%;
+    border: 1px black;
+}
+
+nav {
+    float: left;
+    margin: 0px;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px;
+    padding: 10px;
+
+}
+
 .menu {
-    position: relative;
-}
-
-.menu>a {
-    position: relative;
-}
-
-.content {
-    position: relative;
-    float: right;
-}
-
-.article {
+    list-style-type: none;
     position: relative;
 }
