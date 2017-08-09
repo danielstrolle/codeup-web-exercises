@@ -16,9 +16,6 @@ ul.nav-links {
     display: inline-block;
 }
 
-h1 {
-    float: left;
-}
 
 li {
     display: inline-block;
@@ -26,12 +23,10 @@ li {
 }
 
 .main {
-    float: left;
     padding: 20px;
 }
 
 .sub-section {
-    float: right;
     padding: 20px;
     font-style: italic;
 }
@@ -40,10 +35,6 @@ footer {
     clear: both;
 }
 
-footer p {
-    float: left;
-
-}
 
 #social-media-links {
     float: right;
