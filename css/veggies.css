@@ -1,0 +1,7 @@
+tbody tr:nth-child(even) {
+    background-color: #ccc;
+}
+
+.table-bordered{
+    border: 2px solid lightgray;
+}
