@@ -66,8 +66,9 @@ switch(shopperName) {
 
 var flipACoin = Math.floor(Math.random() * 2)
 
-var coinFlip = (flipACoin == 0) ? console.log("Buy a Car!") : console.log("Buy a House!");
-
+// var coinFlip = (flipACoin === 0) ? console.log("Buy a Car!") : console.log("Buy a House!");
+var coinFlip = flipACoin === 0 ? "buy a car" : "buy a house";
+console.log(coinFlip);
 
 var luckyNumber = Math.floor(Math.random() * 6);
 var receiptSubtotal = 60;
