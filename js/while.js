@@ -1,9 +1,9 @@
 'use strict';
 
 var limit = 65536;
-var counter;
+var counter = 2;
+// counter = 2; add this to line above declaring the variable^^
 
-counter = 2;
 while (counter <= limit) {
     console.log(counter);
     counter *= 2;
