@@ -1,4 +1,4 @@
-(function(){
+(function () {
     "use strict";
 
     /**
@@ -9,52 +9,32 @@
     var person = {
         firstName: "Daniel",
         lastName: "Strolle",
-        fullName: function() {
+        fullName: function () {
             return this.firstName + " " + this.lastName;
         }
     };
-        person.sayHello = function () {
-            console.log("Hello from " + this.fullName());
-        };
+    person.sayHello = function () {
+        console.log("Hello from " + this.fullName());
+    };
     console.log(person.fullName());
     (person.sayHello());
 
 
-    /**
-     * TODO:
-     * Create firstName and lastName properties in your person object, and
-     * assign your name to them
-     */
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
 
-    /**
-     * TODO:
-     * Add a sayHello method to the person object that returns a greeting using
-     * the firstName and lastName properties.
-     * console.log the returned message to check your work
-     *
-     * Example
-     * person.sayHello() // returns "Hello from Rick Sanchez!"
-     */
+    for (var i = 0; i < shoppers.length; i++) {
+        if (shoppers[i].amount >= 200)
+            var discount = (shoppers[i].amount * .1);
+        else
+            discount = 0;
+        var discountTotal =  (shoppers[i].amount - discount)
+        console.log(shoppers[i].name + " has a total of: $" +shoppers[i].amount + " has a discount of: $" + discount + " for a final total of: $" + discountTotal);
+    }
 
-    /** TODO: Remember this problem from before?
-     *
-     * HEB has an offer for the shoppers that buy products amounting to more
-     * than $200. Write a JS program, using conditionals, that logs to the
-     * browser, how much does Ryan, Cameron and George need to pay. We know that
-     * Cameron bought $180, Ryan $250 and George $320. Your program will have to
-     * display a line with the name of the person, the amount before the
-     * discount, the discount, if any, and the amount after the discount.
-     *
-     * Uncomment the lines below to create an array of objects where each object
-     * represents one shopper. Use a foreach loop to iterate through the array,
-     * and console.log the relevant messages for each person
-     */
-
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
 
 
 })();
