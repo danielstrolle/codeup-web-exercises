@@ -15,7 +15,7 @@
         console.log(names[i]);
     }
 
-    names.forEach(function (e,) {
+    names.forEach(function (e) {
         console.log(e);
     });
 })();

@@ -18,7 +18,6 @@
             console.log("Number to skip is: " + i);
             continue
         }
-
         console.log("Here is an odd number " + i);
     }
 
