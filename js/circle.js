@@ -6,13 +6,12 @@
         radius: 3,
 
         getArea: function () {
-            var circleArea = Math.PI * (Math.pow(circle.radius, 2));
+            var circleArea = Math.PI * (Math.pow(this.radius, 2));
 
             return circleArea;
         },
 
         logInfo: function (doRounding) {
-            // TODO: complete this method.
             if (doRounding === true){
                 var roundedArea = Math.round(circle.getArea())
             } else {
