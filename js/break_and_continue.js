@@ -8,7 +8,7 @@
 //     if ( (userNumber >= 1 && userNumber <=50) && (userNumber % 2 == 1)) {
 //         console.log("Found an odd number between the range of 1 and 50!")
 //         break
-    }
+//     }
     var userNumber = prompt("Give me an odd number between 1 and 50 ");
         userNumber = parseInt(userNumber);
     //i am doing +=2 because I am looking for only odd numbers
@@ -33,7 +33,7 @@
     // else {
     //     break
     // }
-}
+// }
 //
 // for (var i=1; i < 50; i++) {
 //     if (i % 2 !== 0) {
