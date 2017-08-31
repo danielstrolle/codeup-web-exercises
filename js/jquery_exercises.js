@@ -1,8 +1,24 @@
 "use strict";
 (function () {
-    var title = $('h1');
-    $().css('font-size', '20px');
-    $('li, p, h1').css('background-color', 'yellow');
-    var contents = title.html();
-    alert(contents);
+
+    var changeBackgroundColor = function () {
+        $(this).css("background-color", "red");
+    };
+    $('h1').click(changeBackgroundColor);
+
+    var paragraph = $("p");
+    var changeParagraphFont = function () {
+        paragraph.css("font-size", "18px");
+    };
+    paragraph.dblclick(changeParagraphFont);
+
+    $("li").hover(
+        function () {
+            $(this).css("color", "red");
+        },
+        function () {
+            $(this).css("color", "black");
+        }
+);
+
 })();
