@@ -20,5 +20,4 @@
             $(this).css("color", "black");
         }
 );
-
 })();
