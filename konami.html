@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!--<style>-->
-        <!--.animate-offscreen {-->
-            <!--position: absolute;-->
-            <!--bottom: 51px;-->
-            <!--text-align: center;-->
-        <!--}-->
-        <!--.animate-onscreen{-->
-            <!--position: relative;-->
-            <!--bottom: 0px;-->
-            <!--transition: bottom 2s;-->
-        <!--}-->
-    <!--</style>-->
+    <style>
+        #mono {
+            text-align: center;
+            font-size: 30px;
+            padding: 100px;
+        }
+
+        body {
+            font-family: 'Press Start 2P', cursive;
+            background-color: black;
+            color: white;
+
+        }
+    </style>
     <meta charset="UTF-8">
     <title>Konami Code</title>
+    <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 </head>
 <body>
-<!--<h1 class="animate-offscreen">Test</h1>-->
-
-    <h1 style="text-align: center" class="main-header">
+<h1 style="text-align:center" class="main-header">
     KONAMI CODE
-    </h1>
-
+</h1>
+<div id="mono">
+    Long ago in a distant land, I, Brandon, the shape-shifting Master of Darkness, unleashed an unspeakable evil! But a
+    foolish Samurai warrior wielding a magic sword stepped forth to oppose me. Before the final blow was struck, I tore
+    open a portal in time and flung him into the future, where my evil is law! Now the fool seeks to return to the past,
+    and undo the future that is Brandon!
+</div>
 <script
         src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
@@ -40,9 +47,12 @@
             i++;
             if (i === konamiCode.length) {
                 var h1 = $("h1");
+                var body = $('body');
+                $("#mono").css("display", "none");
                 h1.html("I'M ALWAYS WATCHING");
-                $("body").css("background-image", "url('img/konami-background.jpg')");
-                h1.css("font-size", "80px").css("color", "white").css("background", "no-repeat");
+                body.css("background-image", "url('img/konami-background.jpg')").css("background-size", "10%");
+                body.animate({backgroundSize: '100%'}, 3000);
+                h1.css("font-size", "80px").css("color", "#8A0707").css("font-family", "Rock Salt, cursive");
                 h1.animate({down: '100px'}, "slow");
                 h1.animate({fontSize: '200px'}, "slow");
                 i = 0;
