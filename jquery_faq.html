@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .invisible {
+            display: none;
+        }
+
+        .highlight {
+            background-color: #ffff00;
+        }
+
+        dt {
+            padding: 10px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>jQuery FAQ</title>
+</head>
+<body>
+<h1>National Parks FAQ</h1>
+<dl>
+    <dt>How did Yellowstone get its name?</dt>
+    <dd class="answer invisible">
+        Founded by Stone Cold Steve Austin, whos favorite color is yellow, Yellowstone seemed to be a perfect fit.
+    </dd>
+    <dt>Is Yellowstone the largest national park?</dt>
+    <dd class="answer invisible">
+        No one knows.
+    </dd>
+    <dt>Is Yellowstone the most visited national park?</dt>
+    <dd class="answer invisible">
+        I visited it once last year, more than any other park.
+    </dd>
+    <dt>What is the difference between a national park and a national forest?</dt>
+    <dd class="answer invisible">
+        There are no Dog Forests.
+    </dd>
+    <dt>How many rangers work in Yellowstone?</dt>
+    <dd class="answer invisible">
+        A few, most still looking for Yogi.
+    </dd>
+    <dt>How do you become a park ranger?</dt>
+    <dd class="answer invisible">
+        Bring a picnic for lunch.
+    </dd>
+    <dt>Can we swim in rivers and lakes?</dt>
+    <dd class="answer invisible">
+        If you can swim in a pool, you can swim in a lake. Rivers are 50/50.
+    </dd>
+    <dt>What is the highest peak in the park?</dt>
+    <dd class="answer invisible">
+        The top of the tallest mountain.
+    </dd>
+    <dt>Does Yellowstone include a federally designated wilderness?</dt>
+    <dd class="answer invisible">
+        Yes, called the yellderness.
+    </dd>
+    <dt>What is the Continental Divide?</dt>
+    <dd class="answer invisible">
+        The line between those who serve complimentary breakfast buffets, and those who dont.
+    </dd>
+</dl>
+
+<button href="" id="showAnswers">
+    Show Answers
+</button>
+
+<script
+        src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous">
+</script>
+<script>
+    "use strict";
+
+    $(document).ready(function() {
+        $('#showAnswers').click(function(event) {
+            event.preventDefault();
+            $(".answer").toggleClass("invisible");
+        });
+
+        var dt = $("dt");
+        dt.click(function(event) {
+            event.preventDefault();
+            dt.not(this).removeClass("highlight");
+            $(this).toggleClass("highlight");
+        });
+    });
+
+
+</script>
+</body>
+</html>
