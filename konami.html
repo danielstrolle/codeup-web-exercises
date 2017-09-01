@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--<style>-->
+        <!--.animate-offscreen {-->
+            <!--position: absolute;-->
+            <!--bottom: 51px;-->
+            <!--text-align: center;-->
+        <!--}-->
+        <!--.animate-onscreen{-->
+            <!--position: relative;-->
+            <!--bottom: 0px;-->
+            <!--transition: bottom 2s;-->
+        <!--}-->
+    <!--</style>-->
+    <meta charset="UTF-8">
+    <title>Konami Code</title>
+</head>
+<body>
+<!--<h1 class="animate-offscreen">Test</h1>-->
+
+    <h1 style="text-align: center" class="main-header">
+    KONAMI CODE
+    </h1>
+
+<script
+        src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous">
+</script>
+<script>
+    "use strict";
+
+    var konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13];
+    var i = 0;
+
+    $(document).keyup(function (event) {
+        var userInput = event.keyCode;
+        if (userInput === konamiCode[i]) {
+            i++;
+            if (i === konamiCode.length) {
+                var h1 = $("h1");
+                h1.html("I'M ALWAYS WATCHING");
+                $("body").css("background-image", "url('img/konami-background.jpg')");
+                h1.css("font-size", "80px").css("color", "white").css("background", "no-repeat");
+                h1.animate({down: '100px'}, "slow");
+                h1.animate({fontSize: '200px'}, "slow");
+                i = 0;
+            }
+        } else {
+            $("h1").html("NOPE, TRY AGAIN NOOB");
+            i = 0;
+        }
+    });
+</script>
+</body>
+</html>
