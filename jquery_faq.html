@@ -13,11 +13,25 @@
         dt {
             padding: 10px;
         }
+        .national-parks {
+            display: none;
+        }
+        #register {
+            display: none;
+        }
     </style>
     <meta charset="UTF-8">
     <title>jQuery FAQ</title>
 </head>
 <body>
+
+<div id="newsletterDiv">
+    <h1 id="newsletterSignup">Whould you like to sign up for our newsletter?</h1>
+    <span id="x">X</span>
+</div>
+
+<h2 id="register">Would you like to register for the site?</h2>
+
 <h1>National Parks FAQ</h1>
 
 <dl>
@@ -123,10 +137,22 @@
         });
         $("h3").click(function () {
             $(this).next().children().css("font-weight", "bold");
+            $(this).next().slideToggle();
         });
         $("li").click(function () {
             $(this).parent().children().first().css("color", "blue");
         });
+        
+        $("#x").click(function () {
+            $("#newsletterDiv").hide();
+        });
+
+        function showRegister () {
+            $("#register").fadeIn();
+        }
+        setTimeout(showRegister, 8000);
+
+
     });
 </script>
 </body>
