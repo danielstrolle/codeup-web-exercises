@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <style>
         .invisible {
             display: none;
@@ -13,9 +15,11 @@
         dt {
             padding: 10px;
         }
+
         .national-parks {
             display: none;
         }
+
         #register {
             display: none;
         }
@@ -25,12 +29,29 @@
 </head>
 <body>
 
-<div id="newsletterDiv">
-    <h1 id="newsletterSignup">Whould you like to sign up for our newsletter?</h1>
-    <span id="x">X</span>
+<!--<div id="newsletterDiv">-->
+<!--<h1 id="newsletterSignup">Whould you like to sign up for our newsletter?</h1>-->
+<!--<span id="x">x</span>-->
+<!--</div>-->
+
+<div class="alert alert-warning alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span>
+    </button>
+    Would you like to sign up for our <em>AWESOME</em> <strong>NEWSLETTER?!</strong>
 </div>
 
-<h2 id="register">Would you like to register for the site?</h2>
+<!--<h2 id="register">Would you like to register for the site?</h2>-->
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Press <strong>HERE</strong> to register for the site!</h4>
+            </div>
+        </div>
+    </div>
+</div>
 
 <h1>National Parks FAQ</h1>
 
@@ -123,11 +144,11 @@
             dt.not(this).removeClass("highlight");
             $(this).toggleClass("highlight");
         });
+
         $('#showAnswers').click(function (event) {
             event.preventDefault();
             $(".answer").toggleClass("invisible");
         });
-
 
         $('#veryImportant').click(function (event) {
             event.preventDefault();
@@ -135,25 +156,40 @@
                 $(this).children().last().css("background-color", "yellow");
             })
         });
+
         $("h3").click(function () {
             $(this).next().children().css("font-weight", "bold");
             $(this).next().slideToggle();
         });
+//           var parks = $(".national-parks");     another way to do line 162, using transitive instead of a h3 call
+//           parks.prev().click(function () {
+//                $(this).next().slideToggle();
+//            })();
+
         $("li").click(function () {
             $(this).parent().children().first().css("color", "blue");
         });
-        
+
         $("#x").click(function () {
             $("#newsletterDiv").hide();
+//            $(this).parent().hide();   same thing as 170, different format
         });
 
-        function showRegister () {
+        function showRegister() {
             $("#register").fadeIn();
         }
         setTimeout(showRegister, 8000);
 
+//        setTimeout(function() {                 another way to do 178-181, calls the function inside of the setTimeout function
+//            $("#register").fadeIn();
+//        }, 8000);
 
-    });
+
+        $("#myModalLabel").modal("show()");
+    })();
 </script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
 </body>
 </html>
