@@ -33,13 +33,29 @@
     (function () {
         "use strict";
 
-        var request = $.ajax("data/blog.json");
-        request.done(function (data) {
-            console.log(data);
-            data.forEach(function (blog) {
-                $("#posts").append("<div><h2>" + blog.title + "</h2><p>" + blog.content + "</p><p><em>" + blog.date + "</em></p><p><strong>" + blog.categories + "</strong></p></div>")
-            })
-        });
+//        2 ways to do the same thing, 2nd one is more easily changed in regards to variable names, ids, elements, etc
+
+//        var request = $.ajax("data/blog.json");
+//        request.done(function (data) {
+//            console.log(data);
+//            data.forEach(function (blog) {
+//                $("#posts").append("<div><h2>" + blog.title + "</h2><p>" + blog.content + "</p><p><em>" + blog.date + "</em></p><p><strong>" + blog.categories + "</strong></p></div>")
+//            });
+//        });
+        var postsDiv = $("#posts");
+
+        $.get("data/blog.json")
+            .done(function (data) {
+                var html = "";
+
+                data.forEach(function (blog) {
+                    html += "<h2>" + blog.title + "</h2>" +
+                        "<p>" + blog.content + "</p>" +
+                        "<p>" + blog.date + "</p>" +
+                        "<p>" + blog.catergories + "</p>";
+                });
+                postsDiv.append(html);
+            });
     })();
 </script>
 </body>
