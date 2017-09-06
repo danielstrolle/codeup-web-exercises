@@ -23,6 +23,30 @@
         #register {
             display: none;
         }
+
+        .pictureFrame {
+            display: block;
+            margin: 10px;
+            clear: both;
+        }
+
+        #frame1 {
+            background-image: url("img/dog-laika-lyngen-back-pack-162461.jpeg");
+            width: 200px;
+            height: 133px;
+        }
+
+        #frame2 {
+            background-image: url("img/pexels-photo-8073.jpg");
+            width: 200px;
+            height: 150px;
+        }
+
+        #frame3 {
+            background-image: url("img/south-africa-wild-nature-wildlife-68162.jpeg");
+            width: 200px;
+            height: 133px;
+        }
     </style>
     <meta charset="UTF-8">
     <title>jQuery FAQ</title>
@@ -46,7 +70,8 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
                 <h4 class="modal-title" id="myModalLabel">Press <strong>HERE</strong> to register for the site!</h4>
             </div>
         </div>
@@ -128,6 +153,10 @@
     Show Answers!
 </button>
 
+<div class="pictureFrame" id="frame1"></div>
+<div class="pictureFrame" id="frame2"></div>
+<div class="pictureFrame" id="frame3"></div>
+
 <script
         src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
@@ -178,6 +207,7 @@
         function showRegister() {
             $("#register").fadeIn();
         }
+
         setTimeout(showRegister, 8000);
 
 //        setTimeout(function() {                 another way to do 178-181, calls the function inside of the setTimeout function
@@ -188,6 +218,8 @@
         setTimeout(function () {
             $("#myModal").modal("show");
         }, 8000);
+
+
     })();
 </script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
