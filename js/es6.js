@@ -95,8 +95,9 @@ let list = '<ul>';
 // developers.forEach(function (developer) {
 
   for (let developer of developers) {
-    list += (`<li> ${developer} </li>`)
-  } console.log(list + "</ul>");
+    list += (`<li>${developer}</li>`)
+  } list += "</ul>";
+console.log(list);
 
 //   // TODO: rewrite the assignment below to use template strings
 //   list += '<li>' + developer + '</li>';
