@@ -41,9 +41,11 @@
     function moreThan3Languages(user) {
         return user.languages.length >= 3;
     }
-
     let filterArray = users.filter(moreThan3Languages);
     console.log(filterArray);
+    // 2 ways to do the same thing!!
+    let filteredList = users.filter(moreThan3Languages => moreThan3Languages.languages.length >=3);
+    console.log(filteredList);
 
 
     let userEmail = users.map(user => user.email);
